@@ -1,25 +1,40 @@
-//
-//  ViewController.swift
-//  SimpleBrowser
-//
-//  Created by 長谷川智希 on 2017/02/04.
-//  Copyright © 2017年 長谷川智希. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
+  @IBOutlet weak var webView: UIWebView!
+  @IBOutlet weak var searchBar: UISearchBar!
+  @IBOutlet weak var backButton: UIBarButtonItem!
+  @IBOutlet weak var reloadButton: UIBarButtonItem!
+  @IBOutlet weak var stopButton: UIBarButtonItem!
+  
+  // ホームページのURL。起動時にこのページを開く。
+  let homeUrlString = "http://www.yahoo.co.jp"
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    // ホームページを開く。
+    open(urlString: homeUrlString)
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
-
-
+  
+  // 文字列で指定されたURLをWeb Viewで開く。
+  func open(urlString: String){
+    let url = URL(string: urlString)
+    let urlRequest = URLRequest(url: url!)
+    webView.loadRequest(urlRequest)
+  }
+  
+  @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+    webView.goBack()
+  }
+  @IBAction func reloadButtonTapped(_ sender: UIBarButtonItem) {
+    webView.reload()
+  }
+  @IBAction func stopButtonTapped(_ sender: UIBarButtonItem) {
+    webView.stopLoading()
+  }
 }
 

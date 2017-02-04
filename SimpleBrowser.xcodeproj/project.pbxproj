@@ -14,6 +14,7 @@
 		E2D579771E460490005E130F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D579751E460490005E130F /* LaunchScreen.storyboard */; };
 		E2D579821E460490005E130F /* SimpleBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D579811E460490005E130F /* SimpleBrowserTests.swift */; };
 		E2D5798D1E460490005E130F /* SimpleBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D5798C1E460490005E130F /* SimpleBrowserUITests.swift */; };
+		E2D5799C1E4615A6005E130F /* button-back.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D5799B1E4615A6005E130F /* button-back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E2D579881E460490005E130F /* SimpleBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D5798C1E460490005E130F /* SimpleBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBrowserUITests.swift; sourceTree = "<group>"; };
 		E2D5798E1E460490005E130F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D5799B1E4615A6005E130F /* button-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-back.png"; path = "SimpleBrowser/Resources/button-back.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		E2D579601E460490005E130F = {
 			isa = PBXGroup;
 			children = (
+				E2D5799A1E461570005E130F /* Resources */,
 				E2D5796B1E460490005E130F /* SimpleBrowser */,
 				E2D579801E460490005E130F /* SimpleBrowserTests */,
 				E2D5798B1E460490005E130F /* SimpleBrowserUITests */,
@@ -123,6 +126,14 @@
 				E2D5798E1E460490005E130F /* Info.plist */,
 			);
 			path = SimpleBrowserUITests;
+			sourceTree = "<group>";
+		};
+		E2D5799A1E461570005E130F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2D5799B1E4615A6005E130F /* button-back.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D5799C1E4615A6005E130F /* button-back.png in Resources */,
 				E2D579771E460490005E130F /* LaunchScreen.storyboard in Resources */,
 				E2D579741E460490005E130F /* Assets.xcassets in Resources */,
 				E2D579721E460490005E130F /* Main.storyboard in Resources */,

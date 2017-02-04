@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ilw-qH-rGB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ilw-qH-rGB" userLabel="Search Panel">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="u9m-6y-hj3">
@@ -46,10 +46,22 @@
                                     <constraint firstAttribute="height" constant="44" id="VNB-ML-oVG"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="l1E-F7-AqY"/>
+                                    <barButtonItem image="button-back.png" id="l1E-F7-AqY" userLabel="Back">
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="BYZ-38-t0r" id="OHe-DY-rbw"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UIS-4n-fSU"/>
-                                    <barButtonItem title="Item" id="LwZ-TR-LXY"/>
-                                    <barButtonItem title="Item" id="DrM-xr-1Ar"/>
+                                    <barButtonItem systemItem="refresh" id="LwZ-TR-LXY" userLabel="Reload">
+                                        <connections>
+                                            <action selector="reloadButtonTapped:" destination="BYZ-38-t0r" id="0XW-1H-q0Z"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="stop" id="DrM-xr-1Ar" userLabel=" Stop">
+                                        <connections>
+                                            <action selector="stopButtonTapped:" destination="BYZ-38-t0r" id="rIi-1i-o2y"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLx-Yv-V3n">
@@ -71,9 +83,19 @@
                             <constraint firstItem="4z6-eG-0s6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sfI-AE-OS1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="l1E-F7-AqY" id="URj-gV-EIc"/>
+                        <outlet property="reloadButton" destination="LwZ-TR-LXY" id="qIY-FO-LkS"/>
+                        <outlet property="searchBar" destination="u9m-6y-hj3" id="YdE-w4-tgF"/>
+                        <outlet property="stopButton" destination="DrM-xr-1Ar" id="It7-RH-AC0"/>
+                        <outlet property="webView" destination="DLx-Yv-V3n" id="0cF-V9-5Wa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="button-back.png" width="44" height="44"/>
+    </resources>
 </document>
